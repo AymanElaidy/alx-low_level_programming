@@ -5,7 +5,7 @@
  * @s: pointer to the array
  *
  * Return: string s
- * 
+ *
  **/
 char *string_toupper(char *s)
 {
