@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _strncat - to concatenate two strings
+ * _strncpy - to copy strings
  *
  * @dest: 1st string
  * @src: 2nd one
@@ -15,7 +15,7 @@ char *_strncpy(char *dest, char *src, int n)
 	{
 		dest[size] = src[size];
 	}
-	while (size <n)
+	while (size < n)
 	{
 		dest[size] = '\0';
 		size++;
