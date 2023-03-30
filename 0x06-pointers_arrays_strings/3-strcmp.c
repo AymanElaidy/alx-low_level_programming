@@ -13,7 +13,7 @@ int _strcmp(char *s1, char *s2)
 
 	while (s2[size] != '\0')
 	{
-		if (s2[size] < s1[size])
+		if (s2[size] > s1[size])
 			return (-15);
 		else if (s2[size] < s1[size])
 			return (15);
