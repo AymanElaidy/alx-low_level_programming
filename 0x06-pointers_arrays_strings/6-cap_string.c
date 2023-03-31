@@ -1,37 +1,39 @@
 #include "main.h"
-/**
- * cap_string - to replace the 1st lower letters in the words with upper ones
- *
- * @s: pointer to the array
- *
- * Return: string s
- *
- **/
-char *cap_string(char *s)
-{
-	int i = 0;
 
-	while (s[i])
+/**
+ * cap_string - Capitalizes all words of a string.
+ * @str: The string to be capitalized.
+ *
+ * Return: A pointer to the changed string.
+ */
+char *cap_string(char *str)
+{
+	int index = 0;
+
+	while (str[index])
 	{
-		while (!(s[i] >= 97 && s[i] <= 122))
-			i++;
-		if (s[i - 1] == ' ' ||
-				s[i - 1] == '\t' ||
-				s[i - 1] == '\n' ||
-				s[i - 1] == ',' ||
-				s[i - 1] == ';' ||
-				s[i - 1] == '.' ||
-				s[i - 1] == '!' ||
-				s[i - 1] == '?' ||
-				s[i - 1] == '"' ||
-				s[i - 1] == '(' ||
-				s[i - 1] == ')' ||
-				s[i - 1] == '{' ||
-				s[i - 1] == '}' ||
-				s[i] == 0)
-			s[i] = s[i] - 32;
-		i++;
+		while (!(str[index] >= 'a' && str[index] <= 'z'))
+			index++;
+
+		if (str[index - 1] == ' ' ||
+		    str[index - 1] == '\t' ||
+		    str[index - 1] == '\n' ||
+		    str[index - 1] == ',' ||
+		    str[index - 1] == ';' ||
+		    str[index - 1] == '.' ||
+		    str[index - 1] == '!' ||
+		    str[index - 1] == '?' ||
+		    str[index - 1] == '"' ||
+		    str[index - 1] == '(' ||
+		    str[index - 1] == ')' ||
+		    str[index - 1] == '{' ||
+		    str[index - 1] == '}' ||
+		    index == 0)
+			str[index] -= 32;
+
+		index++;
 	}
-	return (s);
+
+	return (str);
 }
 
