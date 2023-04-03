@@ -12,7 +12,7 @@ char *_strchr(char *s, char c)
 	int pos;
 
 	pos = 0;
-	while (s[pos] != '\0')
+	while (s[pos] >= '\0')
 	{
 		if (c == s[pos])
 			return (&s[0] + pos);
