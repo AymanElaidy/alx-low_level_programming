@@ -10,14 +10,18 @@
 char *_strpbrk(char *s, char *accept)
 {
 	int s_pos, acc_pos;
+	char *pos;
 
 	for (s_pos = 0 ; s[s_pos != '\0'] ; s_pos++)
 	{
-		for (acc_pos = 0 ; accept[acc_pos] != '\0'; acc_pos++)
+		for (acc_pos = 0 ; accept[acc_pos] != '\0' ; acc_pos++)
 		{
 			if (accept[acc_pos] == s[s_pos])
-				return (&s[s_pos]);
+			{
+				pos = &s[s_pos];
+				return (pos);
+			}
 		}
 	}
-	return (&s[s_poss]);
+	return (pos);
 }
