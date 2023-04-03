@@ -12,7 +12,7 @@ char *_strpbrk(char *s, char *accept)
 	int s_pos, acc_pos;
 	char *pos;
 
-	for (s_pos = 0 ; s[s_pos != '\0'] ; s_pos++)
+	for (s_pos = 0 ; s[s_pos] != '\0' ; s_pos++)
 	{
 		for (acc_pos = 0 ; accept[acc_pos] != '\0' ; acc_pos++)
 		{
@@ -23,5 +23,5 @@ char *_strpbrk(char *s, char *accept)
 			}
 		}
 	}
-	return (0);
+	return (i0);
 }
