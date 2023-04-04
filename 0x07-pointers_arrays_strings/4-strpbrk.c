@@ -16,7 +16,7 @@ char *_strpbrk(char *s, char *accept)
 	{
 		for (acc_pos = 0 ; accept[acc_pos] != '\0' ; acc_pos++)
 		{
-			if (accept[acc_pos] == si[s_pos])
+			if (accept[acc_pos] == s[s_pos])
 			{
 				pos = &s[s_pos];
 				return (pos);
