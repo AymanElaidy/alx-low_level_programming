@@ -8,15 +8,12 @@
  */
 void print_diagsums(int *a, int size)
 {
-	int r, c, sum_diagonal = 0;
+	int r, sum_diagonal1 = 0, sum_diagonal2 = 0;
 
 	for (r = 0 ; r < size ; r++)
 	{
-		for (c = 0 ; c < size ; c++)
-		{
-			if ((r == c) || (c == size - r))
-				sum_diagonal += a[r][c];
-		}
+		sum_diagonal1 += a[(size + 1) * r];
+		sum_diagonal2 += a[(size - 1) * (r + 1)];
 	}
-	printf(sum_diagonal);
+	printf("%d, %d", sum_diagonal1, sum_diagonal2);
 }
