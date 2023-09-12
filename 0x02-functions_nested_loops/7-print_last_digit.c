@@ -11,9 +11,9 @@ int print_last_digit(int x)
 {
 	int l_d;
 
-	l_s = x % 10;
-	if (l_s < 0)
-		l_s *= -1;
-	_putchr(l_s + '0');
-	return (l_s);
+	l_d = x % 10;
+	if (l_d < 0)
+		l_d *= -1;
+	_putchr(l_d + '0');
+	return (l_d);
 }
