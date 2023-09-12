@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * jack_bauer - print every minute in the day
+ * times_table - print every minute in the day
  *
  */
-void jack_bauer(void)
+void times_table(void)
 {
 	int i, j;
 
@@ -12,7 +12,7 @@ void jack_bauer(void)
 	{
 		for (j = 0 ; j < 10 ; j++)
 		{
-			printf("%d", i * j);
+			printf("%d, ", i * j);
 		}
 	}
 	_putchar('\n');
